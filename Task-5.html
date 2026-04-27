@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background: #eef1f5;
+  margin: 0;
+}
+
+.header {
+  background: linear-gradient(90deg, #4facfe, #fed400);
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.header h1 {
+  margin: 0;
+}
+
+.container {
+  width: 90%;
+  margin: 20px auto;
+}
+
+.card {
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+h2 {
+  margin-top: 0;
+}
+
+.colors {
+  display: flex;
+  gap: 10px;
+}
+
+.color-box {
+  padding: 15px;
+  color: white;
+  border-radius: 8px;
+  flex: 1;
+  text-align: center;
+}
+
+.red { background: #e74c3c; }
+.green { background: #2ecc71; }
+.blue { background: #3498db; }
+.black { background: #333; }
+
+.gradient {
+  background: linear-gradient(45deg, #ff6b6b, #feca57);
+  padding: 40px;
+  text-align: center;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+}
+
+.borders {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.box {
+  padding: 10px 20px;
+}
+
+.dashed { border: 2px dashed #3498db; }
+.dotted { border: 2px dotted #3498db; }
+.double { border: 4px double #3498db; }
+.rounded { border: 2px solid #3498db; border-radius: 10px; }
+.pill {
+  background: #3498db;
+  color: white;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.shadow-box {
+  padding: 20px;
+  border-radius: 10px;
+  transition: 0.3s;
+  background: #fafafa;
+}
+
+.shadow-box:hover {
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  transform: translateY(-5px);
+}
+
+.button {
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  color: white;
+  padding: 10px 15px;
+  border-radius: 6px;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.dropcap::first-letter {
+  font-size: 40px;
+  float: left;
+  margin-right: 5px;
+}
+
+.smallcaps {
+  font-variant: small-caps;
+  letter-spacing: 2px;
+  border: 1px solid black; 
+  border-radius: 5px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+td, th {
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+tr:nth-child(even) {
+  background: #f2f2f2;
+}
+
+.overflow-box {
+  height: 100px;
+  overflow: scroll;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="header">
+  <h1>Mastering CSS Styling</h1>
+  <p>A Comprehensive Visual Reference Guide</p>
+</div>
+
+<div class="container">
+
+  <div class="card">
+    <h2>1. Color Systems</h2>
+    <p>Colors can be defined using names, Hex codes,RGB,or HSL values.</p>
+    <div class="colors">
+      <div class="color-box red">HEX (#e74c3c)</div>
+      <div class="color-box green">RGB</div>
+      <div class="color-box blue">HSL</div>
+      <div class="color-box black">RGBA</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>2. Backgrounds & Gradients</h2>
+    <div class="gradient">Linear Gradient Background</div>
+    <P>Using linear-gradient(45deg,#ff6b6b,#feca57) for modern UI looks</P>
+  </div>
+
+  <div class="card">
+    <h2>3. Borders & Shapes</h2>
+    <div class="borders">
+      <div class="box dashed">Dashed</div>
+      <div class="box dotted">Dotted</div>
+      <div class="box double">Double</div>
+      <div class="box rounded">Rounded</div>
+      <div class="pill">O</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>4. Shadows & Hover Effects</h2>
+    <div class="shadow-box">
+       <h2>Box Shadow Card</h2> 
+      <p>Hover over this card to see shadow transition and lift effect.</p>
+      <div class="button">Interactive Button</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>5. Text & Typography</h2>
+    <p class="dropcap">
+      This paragraph uses::first-letter pseudo element to create 'Drop cap' effect. It adds a touch of classic Publishing style to modern web design.
+    </p><br>
+    <p class="smallcaps">
+      This is a very long small sentence tha......
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>6. Structure (Lists & Tables)</h2>
+    <ul>
+      <li>Square Bullet 1</li>
+      <li>Square Bullet 2</li>
+      <li>Square Bullet 3</li>
+    </ul>
+
+    <table>
+      <tr>
+        <th>Property</th>
+        <th>Description</th> 
+      </tr>
+      <tr>
+        <td>border-collapse</td>
+        <td>Combines table borders into one.</td>
+      </tr>
+      <tr>
+        <td>nth-child</td>
+        <td>Style specific rows (likeZebra stripes).</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h2>7. Overflow Control</h2>
+    <div class="overflow-box">
+      This is a scrollable container. inside here is a lot of content that exceeds the 100px height limit set on the parents.<br><br>
+      Because overflow; auto is used the browser provides a scrollbar only when necessary.<br><br>
+      Content line 1 <br>
+      Content line 2 <br>
+      Content line 3 <br>
+      Content line 4 <br>
+      Content line 5 <br>
+     
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
