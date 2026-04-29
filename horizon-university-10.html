@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Horizon University</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial;
+    }
+
+    body {
+      background: #f4f4f4;
+    }
+
+    header {
+      background: #0a3d62;
+      color: white;
+      padding: 15px;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+    }
+
+    .hero {
+      height: 400px;
+      background: url("https://images.unsplash.com/photo-1523580494863-6f3031224c94")
+        no-repeat center/cover;
+    }
+
+    .overlay {
+      height: 100%;
+      background: rgba(0, 0, 50, 0.6);
+      color: white;
+      text-align: center;
+      padding-top: 120px;
+    }
+
+    .overlay h1 {
+      font-size: 36px;
+    }
+
+    .overlay button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      background: orange;
+      border: none;
+      cursor: pointer;
+    }
+
+    .stats {
+      display: flex;
+      justify-content: space-around;
+      background: white;
+      padding: 25px;
+    }
+
+    .stats div {
+      text-align: center;
+    }
+
+    .departments {
+      text-align: center;
+      padding: 40px;
+    }
+
+        .departments {
+            padding: 70px 40px;
+        }
+
+        .departments h2 {
+            text-align: center;
+            font-size: 40px;
+            color: #002b8f;
+            margin-bottom: 50px;
+        }
+
+        .cards {
+            display: flex;
+            gap: 25px;
+            justify-content: center;
+        }
+
+        .card {
+            width: 32%;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .top-box {
+            height: 140px;
+        }
+
+        .orange {
+            background: linear-gradient(to right, #ff5e00, #ff9a4d);
+        }
+
+        .blue {
+            background: linear-gradient(to right, #3d7eff, #9defff);
+        }
+
+        .green {
+            background: linear-gradient(to right, #00b33c, #00ff66);
+        }
+
+        .card-content {
+            padding: 25px;
+        }
+
+        .card-content h3 {
+            font-size: 25px;
+            margin-bottom: 15px;
+        }
+
+        .card-content p {
+            font-size: 18px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .card-content a {
+            display: inline-block;
+            margin-top: 20px;
+            font-size: 20px;
+            text-decoration: none;
+            color: #002b8f;
+            font-weight: bold;
+        }
+  
+
+    footer {
+      background: #222;
+      color: white;
+      padding: 30px;
+    }
+
+    .footer-container {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .copy {
+      text-align: center;
+      margin-top: 20px;
+    }
+  </style>
+  <body>
+    <!doctype html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Horizon University</title>
+        <link rel="stylesheet" href="style.css" />
+      </head>
+      <body>
+
+        <header>
+          <div class="container nav">
+            <h2>Horizon University</h2>
+            <nav>
+              <a href="#">Home</a>
+              <a href="#">Academics</a>
+              <a href="#">Admissions</a>
+              <a href="#">Campus Life</a>
+            </nav>
+          </div>
+        </header>
+
+        <section class="hero">
+          <div class="overlay">
+            <h1>Empowering Your Future</h1>
+            <p>
+              Discover a world-class education designed to innovate, inspire,
+              and elevate your career.
+            </p>
+            <button>Apply Now</button>
+          </div>
+        </section>
+
+        <section class="stats">
+          <div>
+            <h2>50+</h2>
+            <p>Undergraduate Programs</p>
+          </div>
+          <div>
+            <h2>15:1</h2>
+            <p>Student-to-Faculty Ratio</p>
+          </div>
+          <div>
+            <h2>95%</h2>
+            <p>Graduate Employment</p>
+          </div>
+          <div>
+            <h2>120+</h2>
+            <p>Student Clubs & Organizations</p>
+          </div>
+        </section>
+
+        <section class="departments">
+        <h2>Featured Departments</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <div class="top-box orange"></div>
+                <div class="card-content">
+                    <h3>College of Engineering</h3>
+                    <p>Build the future with cutting-edge labs and expert faculty.</p>
+                    <a href="#">Learn More →</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="top-box blue"></div>
+                <div class="card-content">
+                    <h3>School of Business</h3>
+                    <p>Develop leadership and entrepreneurial skills to thrive globally.</p>
+                    <a href="#">Learn More →</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="top-box green"></div>
+                <div class="card-content">
+                    <h3>Arts & Sciences</h3>
+                    <p>Explore your passions with diverse programs and innovation.</p>
+                    <a href="#">Learn More →</a>
+                </div>
+            </div>
+
+        </div>
+        <footer>
+          <div class="footer-container">
+            <div>
+              <h3>Horizon University</h3>
+              <p>123 University Blvd<br />Innovation City</p>
+            </div>
+
+            <div>
+              <h3>Quick Links</h3>
+              <p>About</p>
+              <p>Student Portal</p>
+              <p>Alumni</p>
+            </div>
+
+            <div>
+              <h3>Resources</h3>
+              <p>Library</p>
+              <p>campus map</p>
+              <p>Career Center</p>
+              <p>Athletics</p>
+            </div>
+          </div>
+          <hr />
+          <p class="copy">© 2026 Horizon University.All Rights Reserved</p>
+        </footer>
+      </body>
+    </html>
+  </body>
+</html>
