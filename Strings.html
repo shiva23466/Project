@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>String</title>
+  </head>
+  <body>
+    <script>
+      // syntax: string.length
+      let name = "Shiva";
+      console.log(name.length); // 5
+
+      let password = "Reddy123";
+      console.log(password.length);
+
+      //string.toUppercase()
+      let name1 = "shiva";
+      console.log(name1.toUpperCase());
+
+      let city = "vijayawada";
+      console.log(city.toUpperCase());
+
+      //string.toLowercase()
+      let name3 = "SHIVA";
+      console.log(name3.toLowerCase());
+
+      let email = "USER@GMAIL.COM";
+      console.log(email.toLowerCase());
+
+      //string.charAt(index)
+      let text = "Shiva";
+      console.log(text.charAt(2)); //i
+
+      let grade = "A+";
+      console.log(grade.charAt(0));
+
+      //string.IndexOf(SearchValue)
+      let textindex = "JavaScript";
+      console.log(textindex.indexOf("a"));
+
+      //string.trim()
+      let texttrim = "   Hello   ";
+      console.log(texttrim.trim());
+
+      //string.includes(searchValue)
+      let textincludes = "JavaScript";
+      console.log(textincludes.includes("Script")); //true
+
+      //string.startsWith(searchValue)
+      let word = "JavaScript";
+      console.log(word.startsWith("Java")); // true
+
+      //string.endsWith(searchValue)
+      let wordname = "JavaScript";
+      console.log(wordname.endsWith("Script"));
+
+      //string.slice(startIndex, endIndex)
+      let letter = "JavaScript";
+      console.log(letter.slice(0, 4));
+
+      //string.substring(startIndex, endIndex)
+      let subtext = "JavaScript";
+      console.log(subtext.substring(0, 4));
+
+      //string.replace(oldValue, newValue)
+      let textreplace = "Hello Shiva";
+      console.log(textreplace.replace("Shiva", "Reddy")); // hello reddy
+
+      //string.split(separator)
+      let textsplit = "Apple,Banana,Mango";
+      console.log(textsplit.split(",")); // ["Apple", "Banana", "Mango"]
+
+      //string.repeat(count)
+      let textrepeat = "Hello ";
+      console.log(textrepeat.repeat(3)); // Hello Hello Hello
+
+      //string.concat(string2)
+      let firstName = "Shiva";
+      let lastName = "Reddy";
+      let fullName = firstName.concat(lastName);
+
+      console.log(fullName);
+    </script>
+  </body>
+</html>
