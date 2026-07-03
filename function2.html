@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Functions Tasks</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      body {
+        background: linear-gradient(135deg, #4f46e5, #7c3aed, #06b6d4);
+        min-height: 100vh;
+        padding: 40px 15px;
+      }
+
+      header {
+        text-align: center;
+        margin-bottom: 40px;
+      }
+
+      header h1 {
+        color: #fff;
+        font-size: 40px;
+        margin-bottom: 10px;
+      }
+
+      header p {
+        color: #f3f4f6;
+        font-size: 18px;
+      }
+
+      .card {
+        max-width: 900px;
+        margin: 25px auto;
+        background: #ffffff;
+        border-radius: 20px;
+        padding: 30px;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        transition: 0.4s;
+      }
+
+      .card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 20px 45px rgba(0, 0, 0, 0.3);
+      }
+
+      .card h2 {
+        color: #4f46e5;
+        margin-bottom: 25px;
+      }
+
+      .row {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      .color-box {
+        height: 220px;
+        border-radius: 15px;
+        background: #e5e7eb;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.4s;
+      }
+
+      input,
+      select {
+        flex: 1;
+        min-width: 130px;
+        padding: 14px;
+        border: 2px solid #d1d5db;
+        border-radius: 10px;
+        outline: none;
+        font-size: 16px;
+        transition: 0.3s;
+      }
+
+      input:focus,
+      select:focus {
+        border-color: #4f46e5;
+        box-shadow: 0 0 12px rgba(79, 70, 229, 0.3);
+      }
+
+      button {
+        padding: 14px 25px;
+        background: #4f46e5;
+        color: #fff;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 600;
+        transition: 0.3s;
+      }
+
+      button:hover {
+        background: #3730a3;
+        transform: scale(1.05);
+      }
+
+      button:active {
+        transform: scale(0.97);
+      }
+
+      .result {
+        margin-top: 20px;
+        font-size: 20px;
+        font-weight: 600;
+      }
+
+      .task_four {
+        margin-top: 20px;
+        background: #dcfce7;
+        border-left: 6px solid #22c55e;
+        color: #166534;
+        padding: 15px;
+        border-radius: 10px;
+        font-weight: 600;
+      }
+
+      .task_red {
+        margin-top: 20px;
+        background: #fee2e2;
+        border-left: 6px solid #ef4444;
+        color: #991b1b;
+        padding: 15px;
+        border-radius: 10px;
+        font-weight: 600;
+      }
+
+      .symbol {
+        font-size: 24px;
+        font-weight: bold;
+        color: #4f46e5;
+      }
+
+      footer {
+        text-align: center;
+        color: #fff;
+        margin-top: 40px;
+        font-size: 18px;
+      }
+
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: #4f46e5;
+        border-radius: 10px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: #ddd;
+      }
+
+      @media (max-width: 768px) {
+        header h1 {
+          font-size: 30px;
+        }
+
+        .card {
+          padding: 20px;
+        }
+
+        .row {
+          flex-direction: column;
+          align-items: stretch;
+        }
+
+        input,
+        select,
+        button {
+          width: 100%;
+        }
+
+        .color-box {
+          height: 180px;
+        }
+      }
+    </style>
+
+    <header>
+      <h1>🚀 JavaScript Functions Practice</h1>
+      <p>HTML • CSS • JavaScript Mini Projects</p>
+    </header>
+
+    <!-- ================= Task 1 ================= -->
+
+    <section class="card">
+      <h2>🎨 Task 1 : Change Background Color</h2>
+
+      <div id="card" class="color-box">
+        <button id="button-bg" onclick="headclick()">CHANGE COLOR</button>
+      </div>
+    </section>
+
+    <!-- ================= Task 2 ================= -->
+
+    <section class="card">
+      <h2>👋 Task 2 : Function with One Parameter</h2>
+
+      <div class="row">
+        <input
+          id="input-val"
+          class="input-one"
+          type="text"
+          placeholder="Enter Your Name"
+        />
+
+        <button onclick="runFunction()">Run Function</button>
+      </div>
+
+      <p id="para" class="result"></p>
+    </section>
+
+    <!-- ================= Task 3 ================= -->
+
+    <section class="card">
+      <h2>🧮 Task 3 : Multiple Parameters</h2>
+
+      <div class="row">
+        <input
+          id="inputEl"
+          class="input-two"
+          type="number"
+          placeholder="First Number"
+        />
+
+        <select id="multiple" class="input-two">
+          <option value="add">+</option>
+          <option value="minus">−</option>
+          <option value="mul">×</option>
+        </select>
+
+        <input
+          id="inputE2"
+          class="input-two"
+          type="number"
+          placeholder="Second Number"
+        />
+
+        <button onclick="calculate()">Calculate</button>
+      </div>
+
+      <p id="paraOne" class="result"></p>
+    </section>
+
+    <!-- ================= Task 4 ================= -->
+
+    <section class="card">
+      <h2>🔐 Task 4 : Password Validation</h2>
+
+      <div class="row">
+        <input
+          id="inputTaskE1"
+          class="inputThree"
+          type="text"
+          placeholder="Enter Password"
+        />
+
+        <input
+          id="inputTaskE2"
+          class="inputFour"
+          type="number"
+          placeholder="Length"
+        />
+
+        <button class="btn" onclick="checkNum()">Check</button>
+      </div>
+
+      <p id="tast-four"></p>
+    </section>
+
+    <!-- ================= Task 5 ================= -->
+
+    <section class="card">
+      <h2>🛒 Task 5 : E-commerce Discount</h2>
+
+      <div class="row">
+        <span class="symbol">$</span>
+
+        <input
+          id="E-commerceE1"
+          class="commerce"
+          type="number"
+          placeholder="Original Price"
+        />
+
+        <span class="symbol">% OFF</span>
+
+        <input
+          id="E-commerceE2"
+          class="commerce"
+          type="number"
+          placeholder="Discount"
+        />
+
+        <button class="btnOne" onclick="applybtn()">Apply</button>
+      </div>
+
+      <p id="ecommersePara"></p>
+    </section>
+
+    <footer>
+      <p>Made with ❤️ using HTML, CSS & JavaScript</p>
+    </footer>
+
+    <!-- JavaScript -->
+
+    <script>
+      // Task 1 : Change Color      
+      const card = document.getElementById("card");
+      const buttonBg = document.getElementById("button-bg");
+
+      const colors = [
+        "#EF4444",
+        "#22C55E",
+        "#3B82F6",
+        "#F97316",
+        "#8B5CF6",
+        "#14B8A6",
+        "#EC4899",
+        "#FACC15",
+      ];
+
+      function headclick() {
+        const randomColor = colors[Math.floor(Math.random() * colors.length)];
+
+        card.style.backgroundColor = randomColor;
+
+        buttonBg.style.backgroundColor = "#ffffff";
+        buttonBg.style.color = randomColor;
+        buttonBg.innerHTML = randomColor;
+      }
+
+      // Task 2 : One Parameter
+
+      const inputVal = document.getElementById("input-val");
+      const para = document.getElementById("para");
+
+      function greetUser(name) {
+        return `Hello ${name}! 👋 Welcome to JavaScript.`;
+      }
+
+      function runFunction() {
+        const name = inputVal.value.trim();
+
+        if (name === "") {
+          para.innerHTML = "❌ Please enter your name.";
+          para.style.color = "red";
+          return;
+        }
+
+        para.innerHTML = greetUser(name);
+        para.style.color = "green";
+      }
+      // Task 3 : Multiple Parameters
+      const inputOne = document.getElementById("inputEl");
+      const inputTwo = document.getElementById("inputE2");
+      const operator = document.getElementById("multiple");
+      const paraOne = document.getElementById("paraOne");
+
+      function calculateTotal(a, b, operation) {
+        switch (operation) {
+          case "add":
+            return a + b;
+
+          case "minus":
+            return a - b;
+
+          case "mul":
+            return a * b;
+
+          default:
+            return 0;
+        }
+      }
+
+      function calculate() {
+        const num1 = Number(inputOne.value);
+        const num2 = Number(inputTwo.value);
+
+        if (isNaN(num1) || isNaN(num2)) {
+          paraOne.innerHTML = "❌ Please enter valid numbers.";
+          paraOne.style.color = "red";
+          return;
+        }
+
+        const answer = calculateTotal(num1, num2, operator.value);
+
+        paraOne.innerHTML = `✅ Final Result : <b>${answer}</b>`;
+        paraOne.style.color = "#4f46e5";
+      }
+
+      // Task 4 : Password Validation
+
+      const password = document.getElementById("inputTaskE1");
+      const lengthInput = document.getElementById("inputTaskE2");
+      const result = document.getElementById("tast-four");
+
+      function checkNum() {
+        const pass = password.value.trim();
+
+        const length = Number(lengthInput.value);
+
+        result.classList.remove("task_four");
+        result.classList.remove("task_red");
+
+        if (pass === "" || length === 0) {
+          result.innerHTML = "❌ Fill all fields.";
+          result.classList.add("task_red");
+          return;
+        }
+
+        if (pass.length === length) {
+          result.innerHTML = "✅ Password Length Matched";
+          result.classList.add("task_four");
+        } else {
+          result.innerHTML = `❌ Password should contain ${length} characters`;
+          result.classList.add("task_red");
+        }
+      }
+
+      // Task 5 : Discount Calculator
+
+      const priceInput = document.getElementById("E-commerceE1");
+      const discountInput = document.getElementById("E-commerceE2");
+      const finalPrice = document.getElementById("ecommersePara");
+
+      function applybtn() {
+        const price = Number(priceInput.value);
+        const discount = Number(discountInput.value);
+
+        finalPrice.classList.remove("task_four");
+        finalPrice.classList.remove("task_red");
+
+        if (isNaN(price) || isNaN(discount) || price <= 0 || discount < 0) {
+          finalPrice.innerHTML = "❌ Enter valid values.";
+          finalPrice.classList.add("task_red");
+          return;
+        }
+
+        const discountAmount = (price * discount) / 100;
+
+        const total = price - discountAmount;
+
+        finalPrice.innerHTML = `
+        💰 Original Price : $${price}<br>
+        🎁 Discount : ${discount}%<br>
+        ✅ Final Price : <b>$${total.toFixed(2)}</b>
+    `;
+
+        finalPrice.classList.add("task_four");
+      }
+    </script>
+  </body>
+</html>
