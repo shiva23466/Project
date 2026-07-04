@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Event Listener Example</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      body {
+        background: #f4f4f4;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        min-height: 100vh;
+        padding: 20px;
+      }
+
+      .container {
+        background: #fff;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        text-align: center;
+        width: 380px;
+      }
+
+      h2 {
+        margin-bottom: 20px;
+        color: #333;
+      }
+
+      #ex1-box {
+        background: #e5e7eb;
+        color: #111827;
+        padding: 25px;
+        border-radius: 10px;
+        font-size: 20px;
+        font-weight: bold;
+        transition: 0.4s ease;
+        margin-bottom: 20px;
+      }
+
+      .buttons {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+      }
+
+      button {
+        border: none;
+        padding: 12px 22px;
+        font-size: 16px;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      #ex1-btn {
+        background: #2563eb;
+        color: white;
+      }
+
+      #ex1-btn:hover {
+        background: #1d4ed8;
+        transform: scale(1.05);
+      }
+
+      #reset-btn {
+        background: #ef4444;
+        color: white;
+      }
+
+      #reset-btn:hover {
+        background: #dc2626;
+        transform: scale(1.05);
+      }
+
+      /* Task-2 */
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      body {
+        background: #f4f4f4;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        min-height: 100vh;
+        padding: 20px;
+      }
+      .container {
+        width: 500px;
+        background: #fff;
+        padding: 25px;
+        border-radius: 12px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        text-align: center;
+      }
+
+      h2 {
+        margin-bottom: 20px;
+        color: #333;
+      }
+
+      #ex5-area {
+        width: 100%;
+        height: 300px;
+        background: #e5e7eb;
+        border: 2px dashed #555;
+        border-radius: 10px;
+        position: relative;
+        overflow: hidden;
+        cursor: crosshair;
+      }
+
+      #ex5-dot {
+        width: 15px;
+        height: 15px;
+        background: red;
+        border-radius: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        transition: opacity 0.2s;
+      }
+
+      .coordinates {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-around;
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      span {
+        color: #2563eb;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h2>DOM Manipulation Example</h2>
+
+      <div id="ex1-box">I'm a boring box 😴</div>
+
+      <div class="buttons">
+        <button id="ex1-btn">Transform Box</button>
+        <button id="reset-btn">Reset Box</button>
+      </div>
+    </div>
+
+    <!-- Task-2 -->
+
+    <div class="container">
+      <h2>Mouse Move Event</h2>
+
+      <div id="ex5-area">
+        <div id="ex5-dot"></div>
+      </div>
+
+      <div class="coordinates">
+        <p>X: <span id="ex5-x">0</span></p>
+        <p>Y: <span id="ex5-y">0</span></p>
+      </div>
+    </div>
+    <script>
+      const box = document.getElementById("ex1-box");
+      const transformBtn = document.getElementById("ex1-btn");
+      const resetBtn = document.getElementById("reset-btn");
+
+      function transformBox() {
+        box.innerText = "I am awesome now! 🚀";
+        box.style.backgroundColor = "#10b981";
+        box.style.color = "white";
+        box.style.transform = "scale(1.05)";
+      }
+
+      function resetBox() {
+        box.innerText = "I'm a boring box 😴";
+        box.style.backgroundColor = "#e5e7eb";
+        box.style.color = "#111827";
+        box.style.transform = "scale(1)";
+      }
+
+      transformBtn.addEventListener("click", transformBox);
+      resetBtn.addEventListener("click", resetBox);
+
+      // Task-2
+      const area = document.getElementById("ex5-area");
+      const dot = document.getElementById("ex5-dot");
+      const displayX = document.getElementById("ex5-x");
+      const displayY = document.getElementById("ex5-y");
+
+      area.addEventListener("mousemove", function (e) {
+        dot.style.opacity = "1";
+
+        dot.style.left = e.offsetX + "px";
+        dot.style.top = e.offsetY + "px";
+
+        displayX.innerText = e.offsetX;
+        displayY.innerText = e.offsetY;
+      });
+
+      area.addEventListener("mouseleave", function () {
+        dot.style.opacity = "0";
+
+        displayX.innerText = 0;
+        displayY.innerText = 0;
+      });
+    </script>
+  </body>
+</html>
